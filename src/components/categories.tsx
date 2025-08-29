@@ -1,10 +1,9 @@
 "use client";
-import { categories } from "@/data/productData";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { categories } from "@/data/productData";
 
 export function Categories() {
   const searchParams = useSearchParams();
-
   const router = useRouter();
   const pathname = usePathname();
 

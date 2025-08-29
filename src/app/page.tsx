@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { ProductList } from "@/components/productList";
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ category: string }>;
+}) {
+  const category = (await searchParams).category;
   return (
     <div className="">
       <h1 className="text-center text-4xl font-bold tracking-widest">
@@ -10,7 +15,7 @@ export default function Home() {
       <div className="relative mb-12 aspect-[3/1]">
         <Image src="/images/featured.png" alt="imagen hero" fill />
       </div>
-      <ProductList />
+      <ProductList category={category} params="home" />
     </div>
   );
 }

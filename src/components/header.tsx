@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import SearchBar from "./searchBar";
 import { Bell, Home, ShoppingCart } from "lucide-react";
+
+import SearchBar from "@/components/searchBar";
 
 export function Header() {
   return (
